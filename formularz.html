@@ -23,7 +23,20 @@
         <!-- pole data / czas -->
         <input type="date" name="termin">
         <!--pole wieloliniowe-->
-        <textarea name="wiadomosc" rows="6" cols="40"></textarea>
+        <textarea name="wiadomosc" rows="6" cols="40"></textarea><br>
+        <!-- pole wyboru typu radio -->
+        <input type="radio" name="plec" value="M" checked> Mężczyzna
+        <input type="radio" name="plec" value="K"> Kobieta
+        <!-- checkbox -->
+        <input type="checkbox" name="zgodaReklamowa" value="tak"> Wyrażam zgodę na reklamy
+        <input type="checkbox" name="zgodaRegulamin" value="tak" required> Akceptuję regulamin
+        <!-- lista rozwijana -->
+        <select name="kategoria"> <!-- pod indeksem "kategoria" -->
+            <option value="" disabled selected>Wybierz kategorię</option> <!-- skrypt widzi brak wyboru -->
+            <option value="elektronika">Elektronika</option> <!-- skrypt widzi elekronika -->
+            <option value="odziez">Odzież</option> <!-- skrypt widzi odziez -->
+            <option value="ksiazki">Książki</option> <!-- skrypt widzi ksiazki -->
+        </select>
         <!-- przycisk submit -->
         <input type="submit" value="Wyślij">
         <!-- alternatywny przycisk submit -->
