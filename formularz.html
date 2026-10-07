@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <!-- action i method mają znaczenie tylko dla jezyka PHP -->
-    <form action="skrypt.php" method="post">
+    <form action="skrypt.php" method="get">
         <!-- type zawsze, name tylko jeśli używamy PHP -->
-        <input type="text" name="imie">
+        <input type="text" name="imie" placeholder="Michał">
+        <!-- pole typu email -->
+        <input type="email" name="email" value="jan@kowalski.pl" autocomplete="email">
+        <!-- pole numeryczne -->
+        <input type="number" name="wiek" min="18" max="100">
+        <!-- pole typu numer telefonu -->
+        <input type="tel" name="telefon" maxlength="12">
+        <!-- pole na hasło -->
+        <input type="password" name="haslo">
+        <!-- pole data / czas -->
+        <input type="date" name="termin">
+        <!--pole wieloliniowe-->
+        <textarea name="wiadomosc" rows="6" cols="40"></textarea>
         <!-- przycisk submit -->
         <input type="submit" value="Wyślij">
         <!-- alternatywny przycisk submit -->
         <button type="submit">Wyślij</button>
     </form>
 </body>
+
 </html>
