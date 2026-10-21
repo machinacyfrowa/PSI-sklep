@@ -2,3 +2,23 @@
 h1 {
     color:red;
 }
+body {
+    background-color: #f0f0f0;
+}
+main {
+    background-color: rgba(0,0,250,0.2)
+}
+/* selektor po klasie */
+.menu {
+    list-style: none; /* pozbęde się kropek przy elementach listy */
+}
+/* selektor po identyfikatorze */
+#logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+/* selektor po elemencie potomnym */
+nav a {
+    text-decoration: none; /* usuwa podkreślenie linków */
+    color: black; /* ustawia kolor linków na czarny */
+}
