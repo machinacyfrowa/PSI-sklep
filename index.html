@@ -13,11 +13,21 @@
     <!-- Dopasowuje szerokość strony do ekranu urządzenia i ustawia początkowe powiększenie. -->
     <title>Sklep komputerowy</title>
     <!-- Ustawia tytuł widoczny na karcie przeglądarki. -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- tu możecie dodac css który będzie działał tylko na tej stronie -->
+    <style>
+        header {
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+    </style>
 </head>
 <!-- Zamyka sekcję metadanych dokumentu. -->
 
 <body>
-    <header>
+    <!-- inline css - tego generalnie nie robimy -->
+    <header style="background-color: #f0f0f0; padding: 10px;">
         <nav>
             <ul>
                 <li><a href="index.html">Strona główna</a></li>
@@ -31,9 +41,10 @@
     </header>
     <main>
         <section>
+            <img src="img/logo.jpg" alt="Logo Sklepu komputerowego" width="200" height="200">
             <h1>Sklep komputerowy</h1>
             <p>Witamy w naszym sklepie komputerowym!</p>
-            <img src="img/logo.jpg" alt="Logo Sklepu komputerowego" width="200" height="200">
+
         </section>
         <section>
             <h2>Kategorie produktów</h2>
