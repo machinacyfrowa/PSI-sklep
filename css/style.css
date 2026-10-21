@@ -1,3 +1,7 @@
+/* główny selektor dla wszystkich elementów */
+* {
+    font-family: Arial, sans-serif; /* ustawia domyślną czcionkę dla całej strony */
+}
 /* selektor po typie elementu */
 h1 {
     color:red;
