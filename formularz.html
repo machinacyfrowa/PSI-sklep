@@ -10,31 +10,52 @@
 <body>
     <!-- action i method mają znaczenie tylko dla jezyka PHP -->
     <form action="skrypt.php" method="get">
+        <!-- labelka jako prawidłowy opis pola -->
+        <label for="imie">Imię:</label>
         <!-- type zawsze, name tylko jeśli używamy PHP -->
-        <input type="text" name="imie" placeholder="Michał">
-        <!-- pole typu email -->
-        <input type="email" name="email" value="jan@kowalski.pl" autocomplete="email">
+        <input type="text" id="imie" name="imie" placeholder="Michał" required minlength="2" maxlength="50"><br>
+        <fieldset>
+            <legend>Dane do logowania</legend>
+            <!-- pole typu email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="jan@kowalski.pl" autocomplete="email"><br>
+                    <!-- pole na hasło -->
+            <label for="haslo">Hasło:</label>
+            <input type="password" id="haslo" name="haslo"><br>
+        </fieldset>
         <!-- pole numeryczne -->
-        <input type="number" name="wiek" min="18" max="100">
+        <label for="wiek">Wiek:</label>
+        <input type="number" id="wiek" name="wiek" min="18" max="100" step="0.5"><br>
         <!-- pole typu numer telefonu -->
-        <input type="tel" name="telefon" maxlength="12">
-        <!-- pole na hasło -->
-        <input type="password" name="haslo">
+        <label for="telefon">Telefon:</label>
+        <input type="tel" id="telefon" name="telefon" 
+                pattern="[+][0-9]{2} [0-9]{3}-[0-9]{3}-[0-9]{3}"
+                title="Format: +48 123-456-789"><br>
+
         <!-- pole data / czas -->
-        <input type="date" name="termin">
+        <label for="termin">Termin:</label>
+        <input type="date" id="termin" name="termin" min="2026-01-01" max="2026-12-31"><br>
         <!--pole wieloliniowe-->
         <textarea name="wiadomosc" rows="6" cols="40"></textarea><br>
         <!-- pole wyboru typu radio -->
         <input type="radio" name="plec" value="M" checked> Mężczyzna
         <input type="radio" name="plec" value="K"> Kobieta
         <!-- checkbox -->
-        <input type="checkbox" name="zgodaReklamowa" value="tak"> Wyrażam zgodę na reklamy
+         <label>
+            <input type="checkbox" name="zgodaReklamowa" value="tak"> Wyrażam zgodę na reklamy
+         </label>
+        <!-- <input type="checkbox" name="zgodaReklamowa" value="tak"> Wyrażam zgodę na reklamy -->
         <input type="checkbox" name="zgodaRegulamin" value="tak" required> Akceptuję regulamin
         <!-- lista rozwijana -->
         <select name="kategoria"> <!-- pod indeksem "kategoria" -->
             <option value="" disabled selected>Wybierz kategorię</option> <!-- skrypt widzi brak wyboru -->
+            
             <option value="elektronika">Elektronika</option> <!-- skrypt widzi elekronika -->
-            <option value="odziez">Odzież</option> <!-- skrypt widzi odziez -->
+            <optgroup label="Odzież">
+                <option value="spodnie">Spodnie</option> <!-- skrypt widzi spodnie -->
+                <option value="koszula">Koszula</option> <!-- skrypt widzi koszula -->
+                <option value="bluza">Bluza</option> <!-- skrypt widzi bluza -->
+            </optgroup>
             <option value="ksiazki">Książki</option> <!-- skrypt widzi ksiazki -->
         </select>
         <!-- przycisk submit -->
