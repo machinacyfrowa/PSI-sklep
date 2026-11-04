@@ -1,22 +1,36 @@
 /* główny selektor dla wszystkich elementów */
 * {
     font-family: Arial, sans-serif; /* ustawia domyślną czcionkę dla całej strony */
+    box-sizing: border-box; /* uwzględnia padding w wymiarach elementu */
 }
-/* selektor po typie elementu */
+/* selektor po typie elementu - waga 1*/
 h1 {
     color:red;
 }
 body {
     background-color: #f0f0f0;
+    line-height: 1.6; /* ustawia wysokość linii dla lepszej czytelności */
+}
+header {
+    line-height: 1.0; /* ustawia wysokość linii dla lepszej czytelności */
 }
 main {
-    background-color: rgba(0,0,250,0.2)
+    background-color: rgba(0,0,250,0.2);
+    padding: 0 10px;
 }
-/* selektor po klasie */
+main > section {
+    margin-bottom: 30px;
+    padding-bottom: 10px; /* dodaje dolny odstęp */
+    border-bottom: 3px dotted black; /* dodaje dolne obramowanie */
+}
+main > section > h2 {
+    margin-top: 0px;
+}
+/* selektor po klasie  - waga 10*/
 .menu {
     list-style: none; /* pozbęde się kropek przy elementach listy */
 }
-/* selektor po identyfikatorze */
+/* selektor po identyfikatorze - waga 100 */
 #logo {
     font-size: 2rem;
     font-weight: bold;
@@ -25,4 +39,55 @@ main {
 nav a {
     text-decoration: none; /* usuwa podkreślenie linków */
     color: black; /* ustawia kolor linków na czarny */
+}
+
+p {
+    color: red !important;
+}
+.naglowekGlowny {
+    color: green;
+}
+#naglowekNiebieski {
+    color: blue;
+}
+h1#naglowekNiebieski {
+    color: pink;
+}
+h1#naglowekNiebieski {
+    color: purple;
+}
+
+div.boxdemo {   
+    width: 100px;
+    height: 100px;
+    padding: 1px 2px 3px 4px; /* dodaje wewnętrzny odstęp */
+    padding-top: 1px;
+    padding-right: 2px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+    border: 1px solid black; /* dodaje obramowanie */
+    border-width: 1px; /* ustawia szerokość obramowania */
+    border-style: solid; /* ustawia styl obramowania */
+    border-color: black; /* ustawia kolor obramowania */
+    box-sizing: border-box; /* uwzględnia padding w wymiarach elementu */
+    background-color: lightblue;
+}
+div.container {
+    width: 1100px;
+    margin: 0 auto; /* centruje kontener */
+}
+div.karta {
+    border: 1px solid black; /* dodaje obramowanie */
+    width: 25%; /* ustawia szerokość karty */
+    padding: 10px; /* dodaje wewnętrzny odstęp */
+    border-radius: 5px; /* zaokrągla rogi karty */
+    margin-bottom: 10px; /* dodaje dolny odstęp */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* dodaje cień do karty */
+}
+div.karta:hover {
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7); /* dodaje cień do karty przy najechaniu */
+}
+div.karta img {
+    max-width: 100%; /* zapewnia, że obraz nie przekroczy szerokości karty */
+    height: auto; /* zachowuje proporcje obrazu */
 }
