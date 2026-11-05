@@ -1,14 +1,22 @@
+:root {
+    --kolor-glowny: #5129FF;
+    --kolor-akcent: #807554;
+    --kolor-tekst: #403A5A;
+    --kolor-tlo: #FFCC2A;
+    --kolor-obramowanie: #807554;
+}
 /* główny selektor dla wszystkich elementów */
 * { 
     box-sizing: border-box; /* uwzględnia padding w wymiarach elementu */
 }
 /* selektor po typie elementu - waga 1*/
 h1 {
-    color:red;
+    color:var(--kolor-glowny);
 }
 body {
     font-family: "Segoe UI", Arial, sans-serif; /* ustawia domyślną czcionkę dla całej strony */
-    background-color: #f0f0f0;
+    background-color: var(--kolor-akcent);
+    color: var(--kolor-tekst); /* ustawia kolor tekstu */
     font-size: 16px; /* ustawia domyślny rozmiar czcionki - 16px to 1rem*/
     line-height: 1.6; /* ustawia wysokość linii dla lepszej czytelności */
 }
@@ -33,15 +41,21 @@ p {
 }
 header {
     line-height: 1.0; /* ustawia wysokość linii dla lepszej czytelności */
+    background-color: var(--kolor-tlo);
+    padding: 10px; /* dodaje wewnętrzny odstęp */
 }
 main {
-    background-color: rgba(0,0,250,0.2);
-    padding: 0 10px;
+    background-color: var(--kolor-tlo);
+    padding: 10px;
+}
+footer {
+    background-color: var(--kolor-tlo);
+    padding: 10px; /* dodaje wewnętrzny odstęp */
 }
 main > section {
     margin-bottom: 30px;
     padding-bottom: 10px; /* dodaje dolny odstęp */
-    border-bottom: 3px dotted black; /* dodaje dolne obramowanie */
+    border-bottom: 3px dotted var(--kolor-obramowanie); /* dodaje dolne obramowanie, moglbym napisac rgba(0,0,0,1) */
 }
 main > section > h2 {
     margin-top: 0px;
@@ -56,24 +70,12 @@ main > section > h2 {
     font-weight: bold;
 }
 /* selektor po elemencie potomnym */
-nav a {
+a {
     text-decoration: none; /* usuwa podkreślenie linków */
-    color: black; /* ustawia kolor linków na czarny */
+    color: var(--kolor-tekst); /* ustawia kolor linków na czarny */
 }
 
 
-.naglowekGlowny {
-    color: green;
-}
-#naglowekNiebieski {
-    color: blue;
-}
-h1#naglowekNiebieski {
-    color: pink;
-}
-h1#naglowekNiebieski {
-    color: purple;
-}
 
 div.boxdemo {   
     width: 100px;
@@ -83,10 +85,10 @@ div.boxdemo {
     padding-right: 2px;
     padding-bottom: 3px;
     padding-left: 4px;
-    border: 1px solid black; /* dodaje obramowanie */
+    border: 1px solid var(--kolor-obramowanie); /* dodaje obramowanie */
     border-width: 1px; /* ustawia szerokość obramowania */
     border-style: solid; /* ustawia styl obramowania */
-    border-color: black; /* ustawia kolor obramowania */
+    border-color: var(--kolor-obramowanie); /* ustawia kolor obramowania */
     box-sizing: border-box; /* uwzględnia padding w wymiarach elementu */
     background-color: lightblue;
 }
@@ -95,7 +97,7 @@ div.container {
     margin: 0 auto; /* centruje kontener */
 }
 div.karta {
-    border: 1px solid black; /* dodaje obramowanie */
+    border: 1px solid var(--kolor-obramowanie); /* dodaje obramowanie */
     width: 25%; /* ustawia szerokość karty */
     padding: 10px; /* dodaje wewnętrzny odstęp */
     border-radius: 5px; /* zaokrągla rogi karty */
