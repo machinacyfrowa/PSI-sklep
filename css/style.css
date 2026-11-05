@@ -4,6 +4,10 @@
     --kolor-tekst: #403A5A;
     --kolor-tlo: #FFCC2A;
     --kolor-obramowanie: #807554;
+
+    --odstep-maly: 8px;
+    --odstep-sredni: 16px;
+    --odstep-duzy: 32px;
 }
 /* główny selektor dla wszystkich elementów */
 * { 
@@ -42,19 +46,19 @@ p {
 header {
     line-height: 1.0; /* ustawia wysokość linii dla lepszej czytelności */
     background-color: var(--kolor-tlo);
-    padding: 10px; /* dodaje wewnętrzny odstęp */
+    padding: var(--odstep-sredni); /* dodaje wewnętrzny odstęp */
 }
 main {
     background-color: var(--kolor-tlo);
-    padding: 10px;
+    padding: var(--odstep-sredni);
 }
 footer {
     background-color: var(--kolor-tlo);
-    padding: 10px; /* dodaje wewnętrzny odstęp */
+    padding: var(--odstep-sredni); /* dodaje wewnętrzny odstęp */
 }
 main > section {
-    margin-bottom: 30px;
-    padding-bottom: 10px; /* dodaje dolny odstęp */
+    margin-bottom: var(--odstep-duzy);
+    padding-bottom: var(--odstep-sredni); /* dodaje dolny odstęp */
     border-bottom: 3px dotted var(--kolor-obramowanie); /* dodaje dolne obramowanie, moglbym napisac rgba(0,0,0,1) */
 }
 main > section > h2 {
@@ -99,9 +103,9 @@ div.container {
 div.karta {
     border: 1px solid var(--kolor-obramowanie); /* dodaje obramowanie */
     width: 25%; /* ustawia szerokość karty */
-    padding: 10px; /* dodaje wewnętrzny odstęp */
+    padding: var(--odstep-maly); /* dodaje wewnętrzny odstęp */
     border-radius: 5px; /* zaokrągla rogi karty */
-    margin-bottom: 10px; /* dodaje dolny odstęp */
+    margin-bottom: var(--odstep-sredni); /* dodaje dolny odstęp */
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* dodaje cień do karty */
 }
 div.karta:hover {
