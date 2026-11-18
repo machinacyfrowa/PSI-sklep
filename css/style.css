@@ -47,6 +47,9 @@ header {
     line-height: 1.0; /* ustawia wysokość linii dla lepszej czytelności */
     background-color: var(--kolor-tlo);
     padding: var(--odstep-sredni); /* dodaje wewnętrzny odstęp */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 main {
     background-color: var(--kolor-tlo);
@@ -55,6 +58,8 @@ main {
 footer {
     background-color: var(--kolor-tlo);
     padding: var(--odstep-sredni); /* dodaje wewnętrzny odstęp */
+    display: flex;
+    justify-content: space-around;
 }
 main > section {
     margin-bottom: var(--odstep-duzy);
@@ -67,7 +72,18 @@ main > section > h2 {
 /* selektor po klasie  - waga 10*/
 .menu {
     list-style: none; /* pozbęde się kropek przy elementach listy */
+    display: flex; /* ustawia elementy menu w linii */
+    flex-direction: row; /* ustawia kierunek elementów w wierszu */
+    gap: var(--odstep-maly); /* dodaje odstęp między elementami menu */
+    align-items: center; /* wyrównuje elementy menu w pionie */
 }
+
+.menu-pionowe {
+    /* jeśli chcielibyśmy ustawić menu w kolumnie */
+    display: flex;
+    flex-direction: column;
+}
+
 /* selektor po identyfikatorze - waga 100 */
 #logo {
     font-size: 2rem;
@@ -99,6 +115,10 @@ div.boxdemo {
 div.container {
     width: 1100px;
     margin: 0 auto; /* centruje kontener */
+}
+div.karty-produktow {
+    display: flex;
+    gap: var(--odstep-maly); /* dodaje odstęp między kartami */
 }
 div.karta {
     border: 1px solid var(--kolor-obramowanie); /* dodaje obramowanie */
