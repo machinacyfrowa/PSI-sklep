@@ -1,41 +1,129 @@
 <!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Procesory</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <h1>Procesory</h1>
-    <figure>
-        <img src="img/produkty/procesor.webp" alt="Procesor" width="30%">
-        <figcaption>Procesor Intel Core</figcaption>
-    </figure>
-    <figure>
-        <img src="img/produkty/amd.webp" alt="Procesor" width="30%">
-        <figcaption>Procesor AMD</figcaption>
-    </figure>
+<!-- ^ deklaracja dokumentu w standardzie html5 -->
 
-    <a href="index.html">Strona główna</a>
-    <!-- każda tabela zaczyna się od tagu <table> i kończy tagiem </table> -->
-    <table border="1" width="100%">
-        <!-- tr oznacza wiersz tabeli (table row)-->
-        <tr><!-- pierwszy wiersz -->
-            <th>nagłówek 1 kolumny</th>
-            <th>nagłówek 2 kolumny</th>
-            <th>nagłówek 3 kolumny</th>
-        </tr>
-        <tr><!-- drugi wiersz -->
-            <td colspan="2">komórka 1, komórka 1, komórka 1</td><!-- 1 kolumna -->
-            <td rowspan="2">komórka 2</td><!-- 2 kolumna -->
-            <!--<td>komórka 3</td>-->
-        </tr>
-        <tr><!-- trzeci wiersz -->
-            <td>komórka 1</td>
-            <td>komórka 2</td>
-            <!--<td>komórka 3</td>-->
-        </tr>
-    </table>
+<!-- otwarcie html i deklaracja języka -->
+<html lang="pl">
+<!-- Element główny dokumentu HTML; atrybut lang określa język strony jako polski. -->
+
+<head>
+    <!-- Sekcja head zawiera metadane i informacje konfiguracyjne strony. -->
+    <meta charset="UTF-8">
+    <!-- Ustawia kodowanie znaków na UTF-8, aby poprawnie wyświetlać polskie znaki. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dopasowuje szerokość strony do ekranu urządzenia i ustawia początkowe powiększenie. -->
+    <title>Sklep komputerowy</title>
+    <!-- Ustawia tytuł widoczny na karcie przeglądarki. -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<!-- Zamyka sekcję metadanych dokumentu. -->
+
+<body>
+    <div class="container">
+        <!-- inline css - tego generalnie nie robimy -->
+        <header>
+            <img src="img/logo.jpg" alt="Logo Sklepu komputerowego" width="200" height="200">
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="procesory.html">Procesory</a></li>
+                    <li><a href="pamieci.html">Pamięci RAM</a></li>
+                    <li><a href="dyski.html">Dyski twarde</a></li>
+                    <li><a href="monitory.html">Monitory</a></li>
+                    <li><a href="klawiatury.html">Klawiatury</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Procesory</h1>
+            <figure>
+                <img src="img/produkty/procesor.webp" alt="Procesor" width="30%">
+                <figcaption>Procesor Intel Core</figcaption>
+            </figure>
+            <figure>
+                <img src="img/produkty/amd.webp" alt="Procesor" width="30%">
+                <figcaption>Procesor AMD</figcaption>
+            </figure>
+
+            <a href="index.html">Strona główna</a>
+            <!-- każda tabela zaczyna się od tagu <table> i kończy tagiem </table> -->
+            <table border="1" width="100%">
+                <!-- tr oznacza wiersz tabeli (table row)-->
+                <tr><!-- pierwszy wiersz -->
+                    <th>nagłówek 1 kolumny</th>
+                    <th>nagłówek 2 kolumny</th>
+                    <th>nagłówek 3 kolumny</th>
+                </tr>
+                <tr><!-- drugi wiersz -->
+                    <td colspan="2">komórka 1, komórka 1, komórka 1</td><!-- 1 kolumna -->
+                    <td rowspan="2">komórka 2</td><!-- 2 kolumna -->
+                    <!--<td>komórka 3</td>-->
+                </tr>
+                <tr><!-- trzeci wiersz -->
+                    <td>komórka 1</td>
+                    <td>komórka 2</td>
+                    <!--<td>komórka 3</td>-->
+                </tr>
+            </table>
+        </main>
+        <footer>
+            <div>
+                <h3>Adres</h3>
+                <p>ul. Komputerowa 3/4<br>
+                    00-000 Miasto
+                </p>
+            </div>
+
+            <div>
+                <h3>Kontakt</h3>
+
+                <p>Email: kontakt@sklep.pl</p>
+                <p>Telefon: 123-456-789</p>
+            </div>
+            <div>
+                <h3>Godziny otwarcia</h3>
+                <!-- tabelka z godzinami otwarcia -->
+                <table>
+                    <tr>
+                        <th>Dzień</th>
+                        <th>Godziny otwarcia</th>
+                    </tr>
+                    <tr>
+                        <td>Poniedziałek</td>
+                        <td>09:00 - 17:00</td>
+                    </tr>
+                    <tr>
+                        <td>Wtorek</td>
+                        <td>09:00 - 17:00</td>
+                    </tr>
+                    <tr>
+                        <td>Środa</td>
+                        <td>09:00 - 17:00</td>
+                    </tr>
+                    <tr>
+                        <td>Czwartek</td>
+                        <td>09:00 - 17:00</td>
+                    </tr>
+                    <tr>
+                        <td>Piątek</td>
+                        <td>09:00 - 17:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sobota</td>
+                        <td>10:00 - 14:00</td>
+                    </tr>
+                    <tr>
+                        <td>Niedziela</td>
+                        <td>Nieczynne</td>
+                    </tr>
+                </table>
+            </div>
+
+        </footer>
+
+    </div> <!-- zamyka kontener -->
 </body>
+<!-- Zamyka sekcję widocznej treści strony. -->
+
 </html>
+<!-- Zamyka cały dokument HTML. -->

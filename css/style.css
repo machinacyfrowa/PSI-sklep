@@ -54,6 +54,21 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+header nav ul {
+    margin: 0; /* usuwa domyślny margines listy */
+    padding: 0; /* usuwa domyślny padding listy */
+}
+header nav ul li a 
+{
+    padding: var(--odstep-maly); /* dodaje wewnętrzny odstęp */
+    transition: background-color 0.3s, color 0.3s; /* dodaje płynne przejście dla tła i koloru tekstu */
+}
+header nav ul li a:hover,
+header nav ul li a:focus
+{
+    background-color: var(--kolor-tekst);
+    color: var(--kolor-tlo); /* zmienia kolor tekstu na tle */
+}
 main {
     background-color: var(--kolor-tlo);
     padding: var(--odstep-sredni);
@@ -63,6 +78,7 @@ footer {
     padding: var(--odstep-sredni); /* dodaje wewnętrzny odstęp */
     display: flex;
     justify-content: space-around;
+    gap: var(--odstep-duzy); /* dodaje odstęp między elementami stopki */
 }
 main > section {
     margin-bottom: var(--odstep-duzy);
@@ -123,4 +139,8 @@ div.karta img {
 section.dlugi-tekst p {
     line-height: 2; /* ustawia wysokość linii dla lepszej czytelności */
     max-width:65ch; /* ustawia maksymalną szerokość tekstu */
+}
+footer td 
+{
+    text-align: center; /* centruje tekst w komórkach tabeli */
 }
