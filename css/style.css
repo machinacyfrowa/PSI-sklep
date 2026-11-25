@@ -54,9 +54,18 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+header nav {
+    flex: 1; /* pozwala na elastyczne rozmieszczenie nawigacji */
+}
 header nav ul {
     margin: 0; /* usuwa domyślny margines listy */
     padding: 0; /* usuwa domyślny padding listy */
+}
+header nav ul li:last-child {
+    flex:1;
+}
+header nav ul li input {
+    width: 100%; /* input zajmuje całą szerokość ostatniego elementu listy */
 }
 header nav ul li a 
 {
@@ -90,6 +99,9 @@ main > section > h2 {
     gap: var(--odstep-maly); /* dodaje odstęp między elementami menu */
     align-items: center; /* wyrównuje elementy menu w pionie */
 }
+.menu li {
+    
+}
 
 .menu-pionowe {
     /* jeśli chcielibyśmy ustawić menu w kolumnie */
@@ -118,8 +130,7 @@ div.karty-produktow {
 }
 div.karta {
     border: 1px solid var(--kolor-obramowanie); /* dodaje obramowanie */
-    min-width: 200px; /* ustawia minimalną szerokość karty */
-    flex: 1 ; /* pozwala kartom rosnąć i kurczyć się w zależności od dostępnego miejsca */
+    flex: 1 0 200px; /* karta może rosnąć, nie moze się kurczyć i ma minimalną szerokość 200px */
     padding: var(--odstep-maly); /* dodaje wewnętrzny odstęp */
     border-radius: 5px; /* zaokrągla rogi karty */
     margin-bottom: var(--odstep-sredni); /* dodaje dolny odstęp */
