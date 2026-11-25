@@ -119,11 +119,13 @@ div.container {
 }
 div.karty-produktow {
     display: flex;
+    flex-wrap: wrap; /* pozwala kartom zawijać się w przypadku braku miejsca */
     gap: var(--odstep-maly); /* dodaje odstęp między kartami */
 }
 div.karta {
     border: 1px solid var(--kolor-obramowanie); /* dodaje obramowanie */
-    width: 25%; /* ustawia szerokość karty */
+    min-width: 200px; /* ustawia minimalną szerokość karty */
+    flex: 1 ; /* pozwala kartom rosnąć i kurczyć się w zależności od dostępnego miejsca */
     padding: var(--odstep-maly); /* dodaje wewnętrzny odstęp */
     border-radius: 5px; /* zaokrągla rogi karty */
     margin-bottom: var(--odstep-sredni); /* dodaje dolny odstęp */
