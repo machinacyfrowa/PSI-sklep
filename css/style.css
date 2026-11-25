@@ -73,13 +73,7 @@ main {
     background-color: var(--kolor-tlo);
     padding: var(--odstep-sredni);
 }
-footer {
-    background-color: var(--kolor-tlo);
-    padding: var(--odstep-sredni); /* dodaje wewnętrzny odstęp */
-    display: flex;
-    justify-content: space-around;
-    gap: var(--odstep-duzy); /* dodaje odstęp między elementami stopki */
-}
+
 main > section {
     margin-bottom: var(--odstep-duzy);
     padding-bottom: var(--odstep-sredni); /* dodaje dolny odstęp */
@@ -141,6 +135,19 @@ div.karta img {
 section.dlugi-tekst p {
     line-height: 2; /* ustawia wysokość linii dla lepszej czytelności */
     max-width:65ch; /* ustawia maksymalną szerokość tekstu */
+}
+footer {
+    background-color: var(--kolor-tlo);
+    padding: var(--odstep-sredni); /* dodaje wewnętrzny odstęp */
+    display: flex;
+    flex-wrap: wrap; /* pozwala elementom stopki zawijać się w przypadku braku miejsca */
+    justify-content: space-around;
+    gap: var(--odstep-duzy); /* dodaje odstęp między elementami stopki */
+}
+footer div 
+{
+    min-width: 200px; /* ustawia minimalną szerokość divów w stopce */
+    flex: 1; /* pozwala divom w stopce rosnąć i kurczyć się w zależności od dostępnego miejsca */   
 }
 footer td 
 {
