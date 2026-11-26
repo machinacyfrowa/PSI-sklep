@@ -128,21 +128,26 @@ div.karty-produktow {
     flex-wrap: wrap; /* pozwala kartom zawijać się w przypadku braku miejsca */
     gap: var(--odstep-maly); /* dodaje odstęp między kartami */
 }
-div.karta {
+article.karta {
     border: 1px solid var(--kolor-obramowanie); /* dodaje obramowanie */
     flex: 1 0 200px; /* karta może rosnąć, nie moze się kurczyć i ma minimalną szerokość 200px */
     padding: var(--odstep-maly); /* dodaje wewnętrzny odstęp */
     border-radius: 5px; /* zaokrągla rogi karty */
     margin-bottom: var(--odstep-sredni); /* dodaje dolny odstęp */
     box-shadow: var(--cien-maly); /* dodaje cień do karty */
+    display: flex; /* sama karta bedzie konterem flexowym dla swoich elementów */
+    flex-direction: column; /* ustawia elementy karty w kolumnie */
+    overflow: hidden; /* ukrywa nadmiar zawartości, jeśli karta jest zbyt mała */
 }
-div.karta:hover {
+article.karta:hover {
     box-shadow: var(--cien-duzy); /* dodaje cień do karty przy najechaniu */
 }
-div.karta img {
+article.karta img {
     max-width: 100%; /* zapewnia, że obraz nie przekroczy szerokości karty */
-    height: auto; /* zachowuje proporcje obrazu */
+    height: 200px; /* ustawia wysokość obrazu - chce żeby wszystkie obrazy miały taką samą wysokość */
+    object-fit: cover; /* zapewnia, że obraz wypełni całą wysokość i szerokość, przycinając nadmiar */
 }
+
 section.dlugi-tekst p {
     line-height: 2; /* ustawia wysokość linii dla lepszej czytelności */
     max-width:65ch; /* ustawia maksymalną szerokość tekstu */
