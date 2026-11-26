@@ -147,6 +147,16 @@ article.karta img {
     height: 200px; /* ustawia wysokość obrazu - chce żeby wszystkie obrazy miały taką samą wysokość */
     object-fit: cover; /* zapewnia, że obraz wypełni całą wysokość i szerokość, przycinając nadmiar */
 }
+div.karta-tresc {
+    display: flex; /* ustawia div karty jako kontener flexowy */
+    flex-direction: column; /* ustawia elementy treści karty w kolumnie */
+    flex-grow:1; /* pozwala treści karty rosnąć w pionie i zajmować dostępne miejsce */
+    padding: var(--odstep-maly); /* dodaje wewnętrzny odstęp */
+    gap: var(--odstep-maly);
+}
+div.karta-tresc p.cena { 
+    margin-top: auto; /* przesuwa ostatni akapit na dół karty */
+}
 
 section.dlugi-tekst p {
     line-height: 2; /* ustawia wysokość linii dla lepszej czytelności */
