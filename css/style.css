@@ -131,6 +131,7 @@ div.karty-produktow {
 article.karta {
     border: 1px solid var(--kolor-obramowanie); /* dodaje obramowanie */
     flex: 1 0 200px; /* karta może rosnąć, nie moze się kurczyć i ma minimalną szerokość 200px */
+    max-width: 300px; /* ustawia maksymalną szerokość karty */
     padding: var(--odstep-maly); /* dodaje wewnętrzny odstęp */
     border-radius: 5px; /* zaokrągla rogi karty */
     margin-bottom: var(--odstep-sredni); /* dodaje dolny odstęp */
@@ -156,6 +157,15 @@ div.karta-tresc {
 }
 div.karta-tresc p.cena { 
     margin-top: auto; /* przesuwa ostatni akapit na dół karty */
+}
+article.karta a {
+    display: inline-block; /* ustawia link jako element blokowy w linii */
+    padding: var(--odstep-maly); /* dodaje wewnętrzny odstęp */
+    background-color: var(--kolor-glowny); /* ustawia kolor tła linku */
+    color: var(--kolor-tlo); /* ustawia kolor tekstu linku */
+    font-weight: bold; /* ustawia pogrubienie tekstu linku */
+    text-decoration: none; /* usuwa podkreślenie linku */
+    text-align: center; /* centruje tekst linku */
 }
 
 section.dlugi-tekst p {
